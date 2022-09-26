@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-3">        
+  </div>
+  <div class="col-md-6">      
+    <div class="container ">
+      <div class="card mb-4 bg-dark">        
+        <div class="card-body">
+          <ng-container *ngIf="starship$ | async as starship; else loading">
+            <h1 class="mb-4">{{ starship.name }}</h1> 
+            
+            <!--<app-list *ngIf="starship.imagesData.length" [entries]="starship.pilotsData" heading="Characters" route="characters"></app-list>-->
+
+            <p>
+              <strong>Model:</strong> {{ starship.model }}<br />
+              <strong>Manufacturer:</strong> {{ starship.manufacturer }}<br />
+              <strong>Cost In Credits:</strong> {{ starship.cost_in_credits }}<br />
+              <strong>Length:</strong> {{ starship.length }}<br />
+              <strong>Max Atmosphering Speed:</strong> {{ starship.max_atmosphering_speed }}<br />
+              <strong>Crew:</strong> {{ starship.crew }}<br />
+              <strong>Cargo Capacity:</strong> {{ starship.cargo_capacity }}<br />
+              <strong>Consumables:</strong> {{ starship.consumables }}<br />          
+              <strong>Hyperdrive Rating:</strong> {{ starship.hyperdrive_rating }}<br />          
+              <strong>MGLT:</strong> {{ starship.MGLT }}<br />          
+              <strong>Passengers:</strong> {{ starship.passengers }}<br />
+              <strong>Starship Class:</strong> {{ starship.starship_class }}
+            </p>
+
+            <app-list *ngIf="starship.pilotsData.length" [entries]="starship.pilotsData" heading="Pilots" route="characters"></app-list>
+
+            <app-list *ngIf="starship.filmsData.length" [entries]="starship.filmsData" heading="Films" route="films"></app-list>
+          </ng-container>
+          <ng-template #loading>
+            <app-loading></app-loading>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">        
+  </div>
+</div>

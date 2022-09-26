@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+a { 
+  color: #212529;
+
+  &:hover {
+    color: #666;
+  }
+}

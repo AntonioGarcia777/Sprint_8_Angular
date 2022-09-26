@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-dark bg-dark">
+  <form class="container-fluid justify-content-md-end">
+    <button class="btn btn-dark btn-outline-light me-3" type="button" routerLink="/login">Login</button>
+    <button class="btn btn-dark btn-outline-light" type="button" routerLink="/register">Sign Up</button>
+  </form>
+</nav>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="text-center" ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+        <br>
+        <img src="https://raw.githubusercontent.com/cdbullones/Angular---API-Star-Wars/master/resources/images/Star-Wars.png" alt="Star Wars">        	
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav id="header" class="navbar navbar-expand navbar-dark sticky-top bg-dark text-light ms-5 mt-4 mb-4">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center" style="width: 100%">
+      <div class="col-sm-12 col-md-3">
+        <button class="btn btn-dark btn-outline-light btn-lg ms-5 me-1" type="button" routerLink="/">HOME</button>
+        <button class="btn btn-dark btn-outline-light btn-lg" type="button" routerLink="/starships">STARSHIPS</button>
+      </div>      
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
