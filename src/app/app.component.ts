@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 import { filter, map } from 'rxjs/operators';
-import { StorageService } from './_services/storage.service';
-import { AuthService } from './_services/auth.service';
+/*import { StorageService } from './_services/storage.service';
+import { AuthService } from './_services/auth.service';*/
 
 @Component({
   selector: 'app-root',
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   username?: string;
 
   constructor(
-    private storageService: StorageService, 
-    private authService: AuthService,
+    /*private storageService: StorageService, 
+    private authService: AuthService,*/
     private activatedRoute: ActivatedRoute,
     private title: Title,
     private router: Router
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.isLoggedIn = this.storageService.isLoggedIn();
+    /*this.isLoggedIn = this.storageService.isLoggedIn();
 
     if (this.isLoggedIn) {
       const user = this.storageService.getUser();
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
       error: err => {
         console.log(err);
       }
-    });
+    });*/
   }
 
   private setPageTitle(): void {

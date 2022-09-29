@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -6,7 +6,7 @@ const API_URL = ''
 
 /*const API_URL = 'http://localhost:4200/api/test/';*/
 
-@Injectable({
+/*@Injectable({
   providedIn: 'root',
 })
 export class UserService {
@@ -27,4 +27,4 @@ export class UserService {
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
-}
+}*/

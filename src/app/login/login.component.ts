@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { StorageService } from '../_services/storage.service';
 
@@ -49,4 +49,4 @@ export class LoginComponent implements OnInit {
     window.location.reload();
   }
 
-}
+}*/

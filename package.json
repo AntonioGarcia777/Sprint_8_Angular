@@ -1,7 +1,12 @@
 {
   "name": "starwars",
   "description": "Star Wars app using Angular, RxJS, Typescript and Star Wars API.",
-  "keywords": ["api", "angular", "typescript", "rxjs"],  
+  "keywords": [
+    "api",
+    "angular",
+    "typescript",
+    "rxjs"
+  ],
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -17,6 +22,7 @@
     "@angular/compiler": "^14.0.3",
     "@angular/core": "^14.0.3",
     "@angular/forms": "^14.0.3",
+    "@angular/material": "^13.1.1",
     "@angular/platform-browser": "^14.0.3",
     "@angular/platform-browser-dynamic": "^14.0.3",
     "@angular/router": "^14.0.3",

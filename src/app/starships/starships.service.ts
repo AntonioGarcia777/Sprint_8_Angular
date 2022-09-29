@@ -61,7 +61,7 @@ export class StarshipsService {
     );
   }
 
-  private getStarships(): Observable<Starship[]> {
+  getStarships(): Observable<Starship[]> {
     return combineLatest([
       this.http.get<StarshipsResponse>(`${getHost()}/starships`).pipe(
         expand(response => response.next ? this.http.get<StarshipsResponse>(response.next) : EMPTY),
