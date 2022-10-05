@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { AuthGuard } from './helpers/auth.guard';
-import { RegisterPageComponent } from './register-page/register-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-/*import { RegisterComponent } from './register/register.component';
+/*import { AuthGuard } from './helpers/auth.guard';*/
+import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';*/
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   /*{
@@ -26,18 +24,9 @@ const routes: Routes = [
   },*/
   {
     path: 'home',
-    component: HomeComponent,
-    canActivate: [AuthGuard],
-  },  
-  {
-    path: 'login',
-    component: LoginPageComponent,
-  },
-  {
-    path: 'register',
-    component: RegisterPageComponent,
-  },
-  /*{ path: 'register', 
+    component: HomeComponent,    
+  },    
+  { path: 'register', 
   component: RegisterComponent 
   },
   { 
@@ -46,13 +35,14 @@ const routes: Routes = [
   },
   { path: 'profile', 
   component: ProfileComponent 
-  },*/
+  },
   {
     path: 'starships',
     loadChildren: () => import('./starships/starships.module').then(m => m.StarshipsModule),
     data: {
       pageTitle: 'Starships'
-    }
+    },
+    /*canActivate: [AuthGuard],*/
   },  
   {
     path: '',

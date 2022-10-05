@@ -1,4 +1,4 @@
-/*import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 const USER_KEY = 'auth-user';
 
@@ -36,4 +36,4 @@ export class StorageService {
     return false;
   }
 
-}*/
+}

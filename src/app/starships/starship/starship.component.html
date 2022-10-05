@@ -6,7 +6,7 @@
       <div class="card mb-4 bg-dark">        
         <div class="card-body">
           <ng-container *ngIf="starship$ | async as starship; else loading">
-            <h1 class="mb-4">{{ starship.name }}</h1> 
+            <h1 class="mb-4"><strong>{{ starship.name }}</strong></h1> 
             
             <!--<app-list *ngIf="starship.imagesData.length" [entries]="starship.pilotsData" heading="Characters" route="characters"></app-list>-->
 

@@ -1,8 +1,7 @@
 import { StarshipsService } from './../starships/starships.service';
 import { Component, OnInit } from '@angular/core';
-
-import { AuthenticationService } from './../services/authentication.service';
 import { Observable } from 'rxjs';
+import { UsersService } from "../users/users.service";
 /*import { UserService } from '../_services/user.service';*/
 
 @Component({
@@ -13,12 +12,13 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
   content?: string;
   public starships: Observable<any> = this.starshipsService.getStarships();
+  getUserLogged: any;
 
 
-  constructor(private authenticationService: AuthenticationService,
-    private starshipsService: StarshipsService) { }
+  constructor(public userService: UsersService, private starshipsService: StarshipsService) { }
 
   ngOnInit(): void {
+    
     /*this.userService.getPublicContent().subscribe({
       next: data => {
         this.content = data;
@@ -32,9 +32,5 @@ export class HomeComponent implements OnInit {
       }
     });*/
   }
-
-  logout(): void {
-    this.authenticationService.logout();
-  }
-
+  
 }

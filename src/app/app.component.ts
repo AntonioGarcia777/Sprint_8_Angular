@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
     });*/
   }
 
-  private setPageTitle(): void {
+  /*private setPageTitle(): void {
     const defaultPageTitle = 'Star Wars';
 
     this.router.events.pipe(
@@ -79,5 +79,5 @@ export class AppComponent implements OnInit {
         }
       })
     ).subscribe((title: string) => this.title.setTitle(title));
-  }
+  }*/
 }

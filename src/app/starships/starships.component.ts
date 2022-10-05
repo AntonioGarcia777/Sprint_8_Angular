@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Observable } from 'rxjs';
-
 import { Starship, StarshipsService } from './starships.service';
+
 
 
 @Component({
@@ -10,8 +9,10 @@ import { Starship, StarshipsService } from './starships.service';
   templateUrl: './starships.component.html',
   styleUrls: ['./starships.component.scss']
 })
-export class StarshipsComponent implements OnInit {
+export class StarshipsComponent implements OnInit {  
+  
   starships$: Observable<Starship[]>;
+  
 
   get currentFilter(): string {
     return this.starshipsSvc.getCurrentFilter();
@@ -23,7 +24,9 @@ export class StarshipsComponent implements OnInit {
     this.starships$ = this.starshipsSvc.starships$;
   }
 
-  onInput(text: string): void {
+  /*onInput(text: string): void {
     this.starshipsSvc.changeFilter(text);
-  }
+  }*/
+
+  
 }

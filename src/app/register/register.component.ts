@@ -38,3 +38,26 @@ export class RegisterComponent implements OnInit {
   }
 
 }*/
+
+import { Component } from "@angular/core";
+import { UsersService } from "../users/users.service";
+import { Router } from '@angular/router';
+
+@Component({
+  selector: "app-register",
+  templateUrl: "./register.component.html",
+  styleUrls: ["./register.component.scss"]
+})
+export class RegisterComponent {
+  email: string;
+  password: string;
+  confirmPassword: string;
+
+  constructor(public userService: UsersService, public router: Router) {}
+
+  register() {
+    console.log(this.email);
+    console.log(this.password);
+    this.router.navigateByUrl('/');
+  }
+}

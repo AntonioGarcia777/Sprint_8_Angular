@@ -10,7 +10,7 @@
               <h3>Starships</h3>
             </div>            
           </div>
-          <ng-container *ngIf="starships$ | async as starships; else loading">
+          <ng-container *ngIf="starships$ | async as starships; else loading">            
             <app-list class="starshipsList" [entries]="starships" route="starships"></app-list>
           </ng-container>
           <ng-template #loading>
